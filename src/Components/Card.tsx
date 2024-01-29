@@ -10,11 +10,23 @@ type Props = {
   phone: string;
 };
 
+const password = 'password';
+
 const Card = ({ name, age, country, job, phone }: Props) => {
   const [showDetails, setShowDetails] = useState(false);
 
-  const toggleDetails = () =>
-    setShowDetails((currentShowDetails) => !currentShowDetails);
+  const toggleDetails = () => {
+    if (!showDetails) {
+      const userInput = prompt();
+      if (userInput === password) {
+        setShowDetails(true);
+      } else {
+        alert('Incorrect password');
+      }
+    } else {
+      setShowDetails(false);
+    }
+  };
   return (
     <div className="card">
       <img src={cat} />

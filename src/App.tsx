@@ -8,6 +8,7 @@ function App() {
       {users.map((user) => {
         return (
           <Card
+            key={user.id}
             name={user.name}
             // age={0}
             country={user.address.city}
