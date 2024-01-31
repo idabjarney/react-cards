@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import cat from '../assets/cat.jpg';
 import Button from './Button';
 
@@ -29,7 +29,7 @@ const Card = ({ name, age, country, job, phone }: Props) => {
   };
   return (
     <div className="card">
-      <img src={cat} />
+      <img src={cat} loading="lazy" />
       <div className="card-inner">
         <h2 className="name">{name}</h2>
         {showDetails && (

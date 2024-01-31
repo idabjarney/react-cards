@@ -1,14 +1,19 @@
-.card {
-  max-width: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.26);
-  border-radius: 5px;
-  overflow: hidden;
-  background-color: dodgerblue;
-  color: ghostwhite;
-  img {
-    width: 100%;
-  }
-  .card-inner {
-    padding: 1rem;
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  .card {
+    max-width: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: dodgerblue;
+    color: ghostwhite;
+    img {
+      width: 100%;
+    }
   }
 }
